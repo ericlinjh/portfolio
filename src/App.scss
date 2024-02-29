@@ -1,0 +1,133 @@
+$text: #FBFBFE;
+$background: #0E0E1B;
+$accent: #FB7375;
+$button-primary: #4242CD;
+$button-secondary: #1C1C46;
+
+h1 {
+  color: $text;
+  font-family: "Metropolis", sans-serif;
+  font-size: 180px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+h2 {
+  color: $text;
+  font-family: "Metropolis", sans-serif;
+  font-size: 90px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+h3 {
+  color: $text;
+  font-family: "Metropolis", sans-serif;
+  font-size: 67px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+h4 {
+  color: $text;
+  font-family: "Metropolis", sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+h5 {
+  color: $text;
+  font-family: "Metropolis", sans-serif;
+  font-size: 38px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+h6 {
+  color: $text;
+  font-family: "Metropolis", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+
+p1 {
+  color: $text;
+  font-family: "Metropolis", sans-serif;
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+p2 {
+  color: $text;
+  font-family: "Metropolis", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+p3 {
+  color: $text;
+  font-family: "Metropolis", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+body {
+  background-color: $background;
+}
+
+#background-gradient {
+  position: absolute;
+  top: -80px;
+  right: 0;
+  width: 80%;
+  z-index: -2;
+}
+
+#background-noise {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+  opacity: 20%;
+}
+
+
+a {
+  text-decoration: inherit;
+  color: inherit;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+#header-logo {
+  margin: 32px 0px 0px 32px;
+}
+
+#header-tabs {
+  margin: 32px 32px 0px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  flex-shrink: 0;
+}
+
