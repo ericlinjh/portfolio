@@ -1,6 +1,17 @@
+import Lottie from 'lottie-react';
 import './App.scss';
 import gradient from './background/gradient.svg'
 import noise from './background/noise.svg'
+import signature from './hero-section/SIGNATURE.json'
+
+const defaultOptions = {
+  loop: false,
+  autoplay: true,
+  animationData: signature,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice"
+  }
+};
 
 function App() {
   return (
@@ -12,6 +23,23 @@ function App() {
           <p1><a href="">Resume</a></p1>
         </div>
       </header>
+
+      <div class="intro">
+        <h1>Hi,</h1>
+        <div>
+          <h1>I'm</h1>
+          <h1>Eric</h1>
+        </div>
+        <p1>Product Manager, Front-end Developer, UI Designer</p1>
+      </div>
+
+      <Lottie
+      animationData={signature}
+      loop={false}
+      autoplay={true}
+      id="signature"
+      />
+
 
       <img id="background-noise" src={noise} />
       <img id="background-gradient" src={gradient} />

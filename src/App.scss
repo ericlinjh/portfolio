@@ -131,3 +131,28 @@ header {
   flex-shrink: 0;
 }
 
+#signature {
+  width: 888px;
+  position: absolute;
+  left: 240px;
+  top: 240px;
+}
+
+.intro {
+  position: absolute;
+  top: 480px;
+
+  h1 {
+    margin: 0 0 0 64px;
+  }
+
+  p1 {
+    margin: 0 0 32px 64px;
+  }
+
+  div {
+    display: flex;
+    align-items: flex-start;
+    gap: 0;
+  }
+}
