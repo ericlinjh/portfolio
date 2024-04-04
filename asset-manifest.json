@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.a84e33af.css",
+    "main.js": "/static/js/main.d0e60acd.js",
+    "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
+    "static/media/noise.svg": "/static/media/noise.1cbf5ebccdd10705cd2fc91284db3367.svg",
+    "static/media/resume.pdf": "/static/media/resume.a82fa9512cb9446a3440.pdf",
+    "static/media/metropolis-latin-700-normal.woff": "/static/media/metropolis-latin-700-normal.a1e10adde11254f9aff2.woff",
+    "static/media/metropolis-latin-400-normal.woff": "/static/media/metropolis-latin-400-normal.d6363f8209002f967c3d.woff",
+    "static/media/metropolis-latin-100-normal.woff": "/static/media/metropolis-latin-100-normal.74289d7167d1a2d2012d.woff",
+    "static/media/metropolis-latin-700-normal.woff2": "/static/media/metropolis-latin-700-normal.3b74274ca1cfa68e1dea.woff2",
+    "static/media/metropolis-latin-400-normal.woff2": "/static/media/metropolis-latin-400-normal.c7106e4ab743a4136ded.woff2",
+    "static/media/metropolis-latin-100-normal.woff2": "/static/media/metropolis-latin-100-normal.9948fc3057b02be58d05.woff2",
+    "static/media/gradient.svg": "/static/media/gradient.69f9e1dcf73ab0d6efb8c569e6fbf532.svg",
+    "index.html": "/index.html",
+    "main.a84e33af.css.map": "/static/css/main.a84e33af.css.map",
+    "main.d0e60acd.js.map": "/static/js/main.d0e60acd.js.map",
+    "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a84e33af.css",
+    "static/js/main.d0e60acd.js"
+  ]
+}
