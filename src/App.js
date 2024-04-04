@@ -3,7 +3,9 @@ import './App.scss';
 import gradient from './background/gradient.svg'
 import noise from './background/noise.svg'
 import signature from './hero-section/SIGNATURE.json'
-import { motion } from 'framer-motion'
+import carousel from './hero-section/carousel.json'
+import resume from './resume.pdf'
+import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
 
 const introFade = {
   hidden: {
@@ -31,6 +33,15 @@ const introTextAnimation = {
 }
 
 function App() {
+
+  const { scrollYProgress } = useScroll();
+
+  useMotionValueEvent(scrollYProgress, "change", 
+    (latest) => {
+      console.log(latest);
+    }
+  );
+
   return (
     <>
       <motion.header
@@ -40,51 +51,78 @@ function App() {
       >
         <h6 id="header-logo">ERIC LIN 嘉宏</h6>
         <div id="header-tabs">
-          <p1><a href="">About Me</a></p1>
-          <p1><a href="">Resume</a></p1>
+          {/* <p><a href="">About Me</a></p> */}
+          <p><a href="https://github.com/ericlinjh">Github</a></p>
+          <p><a href="https://www.linkedin.com/in/ericlinjh/">Linkedin</a></p>
+          <p><a href={resume} target="_blank">Resume</a></p>
         </div>
       </motion.header>
 
-      <motion.div 
-        class="intro"
-        variants={introFade}
-        initial="hidden"
-        animate="visible"
-      >
-        <motion.h1
-          variants={introTextAnimation}
-          initial="initial"
-          animate="animate"
-        >
-          Hi,
-        </motion.h1>
-        <div>
-          <motion.h1
-            variants={introTextAnimation}
-            initial="initial"
-            animate="animate"
+      <div className="hero-section">
+        <div className="left-hero">
+          <motion.div 
+            class="intro"
+            variants={introFade}
+            initial="hidden"
+            animate="visible"
           >
-            I'm
-          </motion.h1>
-          <div class="text-container">
             <motion.h1
               variants={introTextAnimation}
               initial="initial"
               animate="animate"
             >
-                Eric
+              Hi,
             </motion.h1>
-          </div>
+            <div>
+              <motion.h1
+                variants={introTextAnimation}
+                initial="initial"
+                animate="animate"
+              >
+                I'm
+              </motion.h1>
+              <div class="text-container">
+                <motion.h1
+                  variants={introTextAnimation}
+                  initial="initial"
+                  animate="animate"
+                >
+                    Eric
+                </motion.h1>
+              </div>
+            </div>
+            <p>Product Manager, Front-end Developer, UI Designer</p>
+          </motion.div>
         </div>
-        <p1>Product Manager, Front-end Developer, UI Designer</p1>
-      </motion.div>
 
-      <Lottie
-      animationData={signature}
-      loop={false}
-      autoplay={true}
-      id="signature"
-      />
+        <motion.div 
+          className="right-hero"
+          variants={introFade}
+          initial="hidden"
+          animate="visible"
+        >
+            <Lottie
+              animationData={carousel}
+              loop={true}
+              autoplay={true}
+            />
+        </motion.div>
+       
+
+        <Lottie
+        animationData={signature}
+        loop={false}
+        autoplay={true}
+        id="signature"
+        />
+      </div>
+      
+{/* 
+      <div>
+        <h3>
+          ABOUT ME * ABOUT ME * ABOUT ME *  
+        </h3>
+      </div> */}
 
 
       <motion.img 

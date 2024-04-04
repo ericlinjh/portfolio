@@ -59,7 +59,7 @@ h6 {
   margin: 0;
 }
 
-p1 {
+p {
   color: $text;
   font-family: "Metropolis", sans-serif;
   font-size: 21px;
@@ -68,26 +68,10 @@ p1 {
   line-height: normal;
 }
 
-p2 {
-  color: $text;
-  font-family: "Metropolis", sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
-p3 {
-  color: $text;
-  font-family: "Metropolis", sans-serif;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-
 body {
   background-color: $background;
+  height: 100vh;
+  overflow: hidden;
 }
 
 #background-gradient {
@@ -138,17 +122,23 @@ header {
   top: 240px;
 }
 
+.hero-section {
+  display: flex;
+  height: 693px;
+  padding: 64px;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-direction: row;
+}
+
 .intro {
-  position: absolute;
-  top: 480px;
-  margin-left: 64px;
   overflow: hidden;
 
   h1 {
     margin: 0;
   }
 
-  p1 {
+  p {
     margin: 0;
   }
 
@@ -157,6 +147,24 @@ header {
     align-items: flex-start;
     gap: 64px;
   }
+}
+
+.left-hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+.right-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 0;
+  align-self: stretch;
 }
 
 .text-container {
