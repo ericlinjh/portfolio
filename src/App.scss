@@ -76,9 +76,9 @@ body {
 
 #background-gradient {
   position: absolute;
-  top: -80px;
-  right: 0;
-  width: 80%;
+  top: 0;
+  right: -20vw;
+  width: 100%;
   z-index: -2;
 }
 
@@ -88,9 +88,7 @@ body {
   right: 0;
   z-index: -1;
   width: 100%;
-  opacity: 15%;
 }
-
 
 a {
   text-decoration: inherit;
@@ -100,14 +98,15 @@ a {
 header {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 }
 
 #header-logo {
-  margin: 32px 0px 0px 32px;
+  margin: 32px 0 0 32px;
 }
 
 #header-tabs {
-  margin: 32px 32px 0px 0px;
+  margin: 32px 32px 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,19 +115,20 @@ header {
 }
 
 #signature {
-  width: 888px;
-  position: absolute;
-  left: 240px;
-  top: 240px;
+  width: 70vw;
+  position: fixed;
+  right: 10vw;
+  bottom: 15vh;
 }
 
 .hero-section {
   display: flex;
-  height: 693px;
-  padding: 64px;
+  padding: 0 0 64px 64px;
   align-items: flex-start;
   flex-shrink: 0;
   flex-direction: row;
+  position: absolute;
+  bottom: 0;
 }
 
 .intro {
