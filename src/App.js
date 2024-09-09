@@ -47,7 +47,7 @@ function App() {
       <motion.header
         variants={introFade}
         initial="hidden"
-        animate="visible"  
+        animate="visible"
       >
         <h6 id="header-logo">ERIC LIN 嘉宏</h6>
         <div id="header-tabs">
@@ -60,7 +60,7 @@ function App() {
 
       <div className="hero-section">
         <div className="left-hero">
-          <motion.div 
+          <motion.div
             class="intro"
             variants={introFade}
             initial="hidden"
@@ -107,39 +107,105 @@ function App() {
         {/*      autoplay={true}*/}
         {/*    />*/}
         {/*</motion.div>*/}
-
-
-        <Lottie
-        animationData={signature}
-        loop={false}
-        autoplay={true}
-        id="signature"
-        />
       </div>
-      
-{/* 
-      <div>
-        <h3>
-          ABOUT ME * ABOUT ME * ABOUT ME *  
-        </h3>
-      </div> */}
 
-
-      <motion.img 
-        id="background-noise" 
-        src={noise}
-        variants={introFade}
-        initial="hidden"
-        animate={{ opacity: "40%" }}
-      />
-      <motion.img
-        id="background-gradient"
-        src={gradient}
-        variants={introFade}
-        initial="hidden"
-        animate="visible"
+      <Lottie
+          animationData={signature}
+          loop={false}
+          autoplay={true}
+          id="signature"
       />
 
+        <div className="infinite-scroll">
+            <div>
+                <h3>
+                    PROJECTS
+                </h3>
+                <h5>
+                    ✴
+                </h5>
+                <h3>
+                    PROJECTS
+                </h3>
+                <h5>
+                    ✴
+                </h5>
+                <h3>
+                    PROJECTS
+                </h3>
+                <h5>
+                    ✴
+                </h5>
+            </div>
+            <div aria-hidden="true">
+                <h3>
+                    PROJECTS
+                </h3>
+                <h5>
+                    ✴
+                </h5>
+                <h3>
+                    PROJECTS
+                </h3>
+                <h5>
+                    ✴
+                </h5>
+                <h3>
+                    PROJECTS
+                </h3>
+                <h5>
+                    ✴
+                </h5>
+            </div>
+        </div>
+
+        <div className="projects">
+            <div className="projects-indiv">
+                <div className="projects-info">
+                    <h5>Personal Website</h5>
+                    <div className="projects-attributes">
+                        <p>DESIGN</p>
+                        <p>DEVELOPMENT</p>
+                    </div>
+                </div>
+                <hr/>
+            </div>
+            <div className="projects-indiv">
+                <div className="projects-info">
+                    <h5>Personal Website</h5>
+                    <div className="projects-attributes">
+                        <p>DESIGN</p>
+                        <p>DEVELOPMENT</p>
+                    </div>
+                </div>
+                <hr/>
+            </div>
+            <div className="projects-indiv">
+                <div className="projects-info">
+                    <h5>Personal Website</h5>
+                    <div className="projects-attributes">
+                        <p>DESIGN</p>
+                        <p>DEVELOPMENT</p>
+                    </div>
+                </div>
+                <hr/>
+            </div>
+        </div>
+
+        <motion.img
+            id="background-noise"
+            src={noise}
+            variants={introFade}
+            initial="hidden"
+            animate={{opacity: "40%"}}
+        />
+        <motion.img
+            id="background-gradient"
+            src={gradient}
+            variants={introFade}
+            initial="hidden"
+            animate="visible"
+        />
     </>
   );
 }

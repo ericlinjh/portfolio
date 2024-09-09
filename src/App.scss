@@ -4,6 +4,8 @@ $accent: #FB7375;
 $button-primary: #4242CD;
 $button-secondary: #1C1C46;
 
+html,body{overflow-y: scroll; overflow-x: hidden }
+
 h1 {
   color: $text;
   font-family: "Metropolis", sans-serif;
@@ -70,8 +72,6 @@ p {
 
 body {
   background-color: $background;
-  height: 100vh;
-  overflow: hidden;
 }
 
 #background-gradient {
@@ -116,19 +116,20 @@ header {
 
 #signature {
   width: 70vw;
-  position: fixed;
+  position: absolute;
   right: 10vw;
   bottom: 15vh;
 }
 
 .hero-section {
+  position: relative;
   display: flex;
   padding: 0 0 64px 64px;
   align-items: flex-start;
   flex-shrink: 0;
   flex-direction: row;
-  position: absolute;
   bottom: 0;
+  min-height: calc(100vh - 95px - 64px);
 }
 
 .intro {
@@ -169,4 +170,83 @@ header {
 
 .text-container {
   overflow: hidden;
+}
+
+.infinite-scroll {
+  animation: scroll 8s linear infinite;
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  align-items: center;
+
+  div {
+    display: flex;
+    flex-direction: row;
+    gap: 32px;
+    align-items: center;
+  }
+
+  h3 {
+    flex-shrink: 0;
+    margin: 0;
+  }
+
+  h5 {
+    padding-bottom: 4px;
+    margin: 0;
+  }
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(calc(-100% - 50px));
+  }
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+  margin-top: 64px;
+}
+
+.projects-indiv {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 70%;
+
+  hr {
+    width: 100%;
+    color: $text;
+  }
+}
+
+.projects-info {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  width: 100%;
+  justify-content: space-between;
+
+  h5 {
+    font-weight: 400;
+    margin: 0
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+
+.projects-attributes {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+
+  p {
+    margin: 0;
+  }
 }
