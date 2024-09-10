@@ -173,7 +173,7 @@ header {
 }
 
 .infinite-scroll {
-  animation: scroll 8s linear infinite;
+  animation: scroll 15s linear infinite;
   display: flex;
   flex-direction: row;
   gap: 32px;
@@ -204,18 +204,23 @@ header {
 }
 
 .projects {
+  margin-top: 64px;
+  position: relative;
+  padding: 48px 0 48px 0;
+}
+
+.projects-list {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 32px;
-  width: 100%;
-  margin-top: 64px;
 }
 
 .projects-indiv {
+  position:relative;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 4px;
   width: 70%;
 
   hr {
@@ -225,6 +230,7 @@ header {
 }
 
 .projects-info {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
@@ -244,9 +250,44 @@ header {
 .projects-attributes {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   gap: 0;
 
   p {
     margin: 0;
   }
+}
+
+#bot-left {
+  bottom: 0;
+  left: 10%;
+  position: absolute;
+}
+
+#bot-right {
+  bottom: 0;
+  right: 10%;
+  position: absolute;
+}
+
+#top-left {
+  top: 0;
+  left: 10%;
+  position: absolute;
+}
+
+#top-right {
+  top: 0;
+  right: 10%;
+  position: absolute;
+}
+
+.hovered_img {
+  position: absolute;
+  height: 100px;
+}
+
+.projects-titlebox {
+  overflow: hidden;
+  position: relative;
 }
