@@ -4,7 +4,7 @@ $accent: #FB7375;
 $button-primary: #4242CD;
 $button-secondary: #1C1C46;
 
-html,body{overflow-y: scroll; overflow-x: hidden }
+html,body {overflow-y: scroll; overflow-x: hidden }
 
 h1 {
   color: $text;
@@ -89,6 +89,22 @@ body {
   right: -20vw;
   width: 100%;
   z-index: -2;
+}
+
+#background-noise-3 {
+  position: absolute;
+  top: 2264px;
+  right: 0;
+  z-index: -1;
+  width: 100%;
+}
+
+#background-noise-2 {
+  position: absolute;
+  top: 1132px;
+  right: 0;
+  z-index: -1;
+  width: 100%;
 }
 
 #background-noise {
@@ -361,4 +377,49 @@ header {
 .jobs .jobs-indiv:hover {
   opacity: 1;
   transition: opacity 0.5s;
+}
+
+#contact-me-scroll {
+  gap: 400px;
+  --gap: 358px;
+}
+
+.contact-me {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  margin: 64px 0 64px 0;
+  position: relative;
+
+  svg {
+    width: 30px
+  }
+
+  p {
+    margin: 0
+  }
+}
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  justify-content: center;
+
+  a {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    align-self: stretch;
+    align-items: center;
+  }
+}
+
+.contact-right {
+  width: 20%;
+
+  p {
+    text-align: right;
+  }
 }
