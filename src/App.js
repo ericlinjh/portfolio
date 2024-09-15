@@ -5,11 +5,11 @@ import noise from './background/noise.svg'
 import signature from './hero-section/SIGNATURE.json'
 //import carousel from './hero-section/carousel.json'
 import resume from './resume.pdf'
-import {motion, stagger, useMotionValue, useMotionValueEvent, useScroll, useTransform} from 'framer-motion'
+import {motion, useMotionValue, useMotionValueEvent, useScroll, useTransform} from 'framer-motion'
 import {useRef} from "react"
 import personal_website from './projects/personal-website.png'
 import g_aim from './projects/garbage-aim.png'
-import { Link, Route, Switch } from "wouter";
+import { Link } from "wouter";
 
 const introFade = {
     hidden: {
@@ -71,8 +71,6 @@ function App() {
     };
 
     const {scrollYProgress} = useScroll();
-
-    const gradient_scroll = useTransform(scrollYProgress, [0, 0.7], ["100%", "0%"])
 
     useMotionValueEvent(scrollYProgress, "change",
         (latest) => {
@@ -197,73 +195,139 @@ function App() {
 
             <div className="projects">
                 <div className="projects-list">
-                    <motion.a
-                        href={"https://github.com/ericlinjh/portfolio"}
-                        target="_blank"
-                        ref={ref}
-                        onMouseMove={handleMouseMove}
-                        initial="initial"
-                        whileHover="whileHover"
-                        variants={projectsVariant}
-                        className="projects-indiv"
-                    >
-                        <div className="projects-info">
-                            <div
-                                className="projects-titlebox"
-                            >
-                                <motion.h5
-                                    variants={{
-                                        initial: {y: 0},
-                                        whileHover: {y: "-100%"}
-                                    }}
-                                    transition={{
-                                        type: "linear",
-                                        duration: 0.1
-                                    }}
+                    {/*<motion.a*/}
+                    {/*    href={"https://github.com/ericlinjh/portfolio"}*/}
+                    {/*    onMouseMove={handleMouseMove}*/}
+                    {/*    initial="initial"*/}
+                    {/*    whileHover="whileHover"*/}
+                    {/*    variants={projectsVariant}*/}
+                    {/*    className="projects-indiv"*/}
+                    {/*>*/}
+                    {/*    <div className="projects-info">*/}
+                    {/*        <div*/}
+                    {/*            className="projects-titlebox"*/}
+                    {/*        >*/}
+                    {/*            <motion.h5*/}
+                    {/*                variants={{*/}
+                    {/*                    initial: {y: 0},*/}
+                    {/*                    whileHover: {y: "-100%"}*/}
+                    {/*                }}*/}
+                    {/*                transition={{*/}
+                    {/*                    type: "linear",*/}
+                    {/*                    duration: 0.1*/}
+                    {/*                }}*/}
+                    {/*            >*/}
+                    {/*                Hong Kong Map App*/}
+                    {/*            </motion.h5>*/}
+                    {/*            <motion.h5*/}
+                    {/*                variants={{*/}
+                    {/*                    initial: {y: "0%"},*/}
+                    {/*                    whileHover: {y: "-100%"}*/}
+                    {/*                }}*/}
+                    {/*                transition={{*/}
+                    {/*                    type: "linear",*/}
+                    {/*                    duration: 0.1*/}
+                    {/*                }}*/}
+                    {/*                style={{position: "absolute"}}*/}
+                    {/*            >Personal Website*/}
+                    {/*            </motion.h5>*/}
+                    {/*        </div>*/}
+                    {/*        <div className="projects-attributes">*/}
+                    {/*            <p>DESIGN</p>*/}
+                    {/*            <p>DEVELOPMENT</p>*/}
+                    {/*        </div>*/}
+                    {/*        <motion.img*/}
+                    {/*            src={personal_website}*/}
+                    {/*            alt={"Image showing project"}*/}
+                    {/*            className="hovered_img"*/}
+                    {/*            style={{*/}
+                    {/*                top: top,*/}
+                    {/*                left: left,*/}
+                    {/*                translateX: "-50%",*/}
+                    {/*                translateY: "-30%"*/}
+                    {/*            }}*/}
+                    {/*            variants={{*/}
+                    {/*                initial: {*/}
+                    {/*                    scale: 0,*/}
+                    {/*                    rotate: "-12.5deg"*/}
+                    {/*                },*/}
+                    {/*                whileHover: {*/}
+                    {/*                    scale: 1,*/}
+                    {/*                    rotate: "0"*/}
+                    {/*                }*/}
+                    {/*            }}*/}
+                    {/*        />*/}
+                    {/*    </div>*/}
+                    {/*    <hr/>*/}
+                    {/*</motion.a>*/}
+                    <Link href="/projects/personal_website" style={{width: "70%"}}>
+                        <motion.div
+                            onMouseMove={handleMouseMove}
+                            initial="initial"
+                            whileHover="whileHover"
+                            variants={projectsVariant}
+                            className="projects-indiv"
+                            style={{width: "100%"}}
+                        >
+                            <div className="projects-info">
+                                <div
+                                    className="projects-titlebox"
                                 >
-                                    Personal Website
-                                </motion.h5>
-                                <motion.h5
+                                    <motion.h5
+                                        variants={{
+                                            initial: {y: 0},
+                                            whileHover: {y: "-100%"}
+                                        }}
+                                        transition={{
+                                            type: "linear",
+                                            duration: 0.1
+                                        }}
+                                    >
+                                        Personal Website
+                                    </motion.h5>
+                                    <motion.h5
+                                        variants={{
+                                            initial: {y: "0%"},
+                                            whileHover: {y: "-100%"}
+                                        }}
+                                        transition={{
+                                            type: "linear",
+                                            duration: 0.1
+                                        }}
+                                        style={{position: "absolute"}}
+                                    >Personal Website
+                                    </motion.h5>
+                                </div>
+                                <div className="projects-attributes">
+                                    <p>DESIGN</p>
+                                    <p>DEVELOPMENT</p>
+                                    <p>CASE STUDY</p>
+                                </div>
+                                <motion.img
+                                    src={personal_website}
+                                    alt={"Image showing project"}
+                                    className="hovered_img"
+                                    style={{
+                                        top: top,
+                                        left: left,
+                                        translateX: "-50%",
+                                        translateY: "-30%"
+                                    }}
                                     variants={{
-                                        initial: {y: "0%"},
-                                        whileHover: {y: "-100%"}
+                                        initial: {
+                                            scale: 0,
+                                            rotate: "-12.5deg"
+                                        },
+                                        whileHover: {
+                                            scale: 1,
+                                            rotate: "0"
+                                        }
                                     }}
-                                    transition={{
-                                        type: "linear",
-                                        duration: 0.1
-                                    }}
-                                    style={{position: "absolute"}}
-                                >Personal Website
-                                </motion.h5>
+                                />
                             </div>
-                            <div className="projects-attributes">
-                                <p>DESIGN</p>
-                                <p>DEVELOPMENT</p>
-                            </div>
-                            <motion.img
-                                src={personal_website}
-                                alt={"Image showing project"}
-                                className="hovered_img"
-                                style={{
-                                    top: top,
-                                    left: left,
-                                    translateX: "-50%",
-                                    translateY: "-30%"
-                                }}
-                                variants={{
-                                    initial: {
-                                        scale: 0,
-                                        rotate: "-12.5deg"
-                                    },
-                                    whileHover: {
-                                        scale: 1,
-                                        rotate: "0"
-                                    }
-                                }}
-                            />
-                        </div>
-                        <hr/>
-                    </motion.a>
+                            <hr/>
+                        </motion.div>
+                    </Link>
                     <motion.a
                         href={"https://github.com/ericlinjh/stormhacks-2022"}
                         target="_blank"
@@ -714,9 +778,4 @@ function App() {
     )
         ;
 }
-
-function About () {
-    return <h2>HELLO WORLD</h2>;
-}
-
 export default App;

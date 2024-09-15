@@ -6,21 +6,24 @@ import About from './About'
 import reportWebVitals from './reportWebVitals';
 import '@fontsource/metropolis/100.css';
 import '@fontsource/metropolis/400.css';
+import '@fontsource/metropolis/500.css';
 import '@fontsource/metropolis/700.css';
 import {Link, Route} from "wouter";
+import Portfolio from "./Portfolio";
 
 const Router = () => (
     <div>
-        <Route path="/" component={App} />
-        <Route path="/about" component={About} />
+        <Route path="/" component={App}/>
+        <Route path="/about" component={About}/>
+        <Route path="/projects/personal_website" component={Portfolio}/>
     </div>
 )
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <Router />
-  </React.StrictMode>
+    <React.StrictMode>
+        <Router/>
+    </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function
