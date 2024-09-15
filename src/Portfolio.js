@@ -9,6 +9,7 @@ import current_work from './projects/portfolio/current_work.png';
 import prev_work from './projects/portfolio/prev_work.png';
 import current_projects from './projects/portfolio/current_projects.png';
 import prev_projects from './projects/portfolio/prev_projects.png';
+import hero_prototype from './projects/portfolio/hero_prototype.gif'
 
 export default function Portfolio() {
     return (
@@ -80,10 +81,14 @@ export default function Portfolio() {
                 </div>
                 <div className="case-study-images">
                     <img src={color_styles} alt="Image displaying selected colours for redesign" />
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/h6HT96Mk0nA?si=GxNcEd74-YpEmOBg"
-                            title="YouTube video player" frameBorder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                    <div>
+                        <img src={hero_prototype}
+                             alt={"GIF showing an earlier prototype of the original loading animation"}
+                        style={{width: "100%"}}/>
+                        <p className="p3">
+                            Earlier prototype of the original loading animation edited in Premiere
+                        </p>
+                    </div>
                 </div>
                 <div className="case-study-section case-study-section-comparisons">
                     <p>Outcomes and Comparisons</p>
