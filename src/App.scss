@@ -423,3 +423,21 @@ header {
     text-align: right;
   }
 }
+
+.about-me {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  align-items: center;
+  margin: 100px;
+}
+
+.about-me {
+  display: flex;
+}
+
+#about-blob {
+  position: absolute;
+  bottom: 0;
+  z-index: -1;
+}

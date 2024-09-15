@@ -2,15 +2,24 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import About from './About'
 import reportWebVitals from './reportWebVitals';
 import '@fontsource/metropolis/100.css';
 import '@fontsource/metropolis/400.css';
 import '@fontsource/metropolis/700.css';
+import {Link, Route} from "wouter";
+
+const Router = () => (
+    <div>
+        <Route path="/" component={App} />
+        <Route path="/about" component={About} />
+    </div>
+)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Router />
   </React.StrictMode>
 );
 
