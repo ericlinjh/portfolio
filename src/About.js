@@ -26,19 +26,33 @@ export default function About() {
                 </div>
             </header>
             <motion.div className="about-me"
-                variants={introFade}
+                        variants={introFade}
                         initial="hidden"
                         animate="visible"
             >
-                <img src={portrait} alt="Portrait of me!" />
+                <img src={portrait} alt="Portrait of me!"/>
                 <div className="about-text">
                     <h6>Nice to meet you!</h6>
-                    <p>
-                        Hey! I’m Eric, and welcome to my site! I study Systems Design Engineering at the University of Waterloo, though I’m currently doing my 3B term on exchange at the University of Hong Kong! I find the most satisfying moments of life to be when all the carefully positioned and executed parts of a plan come together, creating something better than you could have ever imagined just looking at the parts separately.
+                    <p className="p2">
+                        Hey! I’m Eric, and welcome to my site! I study Systems Design Engineering at the University of
+                        Waterloo, though I’m currently doing my 3B term on exchange at the University of Hong Kong! I
+                        find the most satisfying moments of life to be when all the carefully positioned and executed
+                        parts of a plan come together, creating something better than you could have ever imagined just
+                        looking at the parts separately.
                         <br/> <br/>
-                        Across my degree, I’ve studied design processes, experienced 4 different internships, ran a half-marathon, and created a short film! Before I graduate I hope to perform in a small band, learn about neurotechnology, and a physical mapping and navigation tool.
+                        Across my degree, I’ve studied design processes, experienced 4 different internships, ran a
+                        half-marathon, and created a short film! Before I graduate I hope to perform in a small band,
+                        learn about neurotechnology, and a physical mapping and navigation tool.
                         <br/> <br/>
-                        During my free time, you’ll often find me playing music or making films. I mainly play bass guitar and baritone saxophone, I’m simply a sucker for those pure deep tones. You can also check out some of the videos I’ve filmed and edited on my YouTube channel, though I hope you like Valorant because there’s a lot of that...
+                        During my free time, you’ll often find me playing music or making films. I mainly play bass
+                        guitar and baritone saxophone, I’m simply a sucker for those pure deep tones. You can also check
+                        out some of the videos I’ve filmed and edited on my <a
+                        href="https://www.youtube.com/@ericlin1435" rel="noreferrer" target="_blank"><u>YouTube
+                        channel</u></a>, though I hope you like
+                        Valorant because there’s a bit too much of that...
+                        <br/> <br/>
+                        I'm based in and a citizen of Canada, though I'm open to relocating for work. I can speak
+                        English, Chinese, and a tiny bit of French.
                     </p>
                 </div>
             </motion.div>
