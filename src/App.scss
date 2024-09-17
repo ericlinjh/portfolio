@@ -493,11 +493,16 @@ header {
     font-weight: 500;
     line-height: 1.25;
   }
+
+  ol {
+    margin: 0;
+  }
 }
 
 .case-study-quote p {
   font-weight: 700;
   font-style: italic;
+  margin: 2rem;
 }
 
 .case-study-images {
@@ -546,4 +551,19 @@ header {
 
 .case-study-section-comparisons {
   gap: 16px;
+}
+
+#map-app  {
+  .case-study-comparisons {
+    align-items: center;
+  }
+
+  .case-study-comparisons-images {
+    width: auto;
+    justify-content: center;
+  }
+
+  .case-study-comparisons-text p {
+    line-height: 1.25;
+  }
 }

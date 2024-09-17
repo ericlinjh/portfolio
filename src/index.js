@@ -10,12 +10,14 @@ import '@fontsource/metropolis/500.css';
 import '@fontsource/metropolis/700.css';
 import {Link, Route} from "wouter";
 import Portfolio from "./Portfolio";
+import MapApp from "./MapApp";
 
 const Router = () => (
     <div>
         <Route path="/" component={App}/>
         <Route path="/about" component={About}/>
         <Route path="/projects/personal_website" component={Portfolio}/>
+        <Route path="/projects/map_app" component={MapApp}/>
     </div>
 )
 
