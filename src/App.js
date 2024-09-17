@@ -246,7 +246,8 @@ function App() {
                                         top: top,
                                         left: left,
                                         translateX: "-50%",
-                                        translateY: "-30%"
+                                        translateY: "-30%",
+                                        height: "250px"
                                     }}
                                     variants={{
                                         initial: {
