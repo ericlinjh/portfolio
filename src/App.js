@@ -9,6 +9,7 @@ import {motion, useMotionValue, useMotionValueEvent, useScroll, useTransform} fr
 import {useRef} from "react"
 import personal_website from './projects/personal-website.png'
 import g_aim from './projects/garbage-aim.png'
+import mapapp from './projects/mapapp/landing_flow.gif'
 import { Link } from "wouter";
 
 const introFade = {
@@ -202,6 +203,7 @@ function App() {
                             whileHover="whileHover"
                             variants={projectsVariant}
                             className="projects-indiv"
+                            style={{width: "100%"}}
                         >
                             <div className="projects-info">
                                 <div
@@ -229,7 +231,7 @@ function App() {
                                             duration: 0.1
                                         }}
                                         style={{position: "absolute"}}
-                                    >Personal Website
+                                    >Hong Kong Map App
                                     </motion.h5>
                                 </div>
                                 <div className="projects-attributes">
@@ -237,7 +239,7 @@ function App() {
                                     <p>DEVELOPMENT</p>
                                 </div>
                                 <motion.img
-                                    src={personal_website}
+                                    src={mapapp}
                                     alt={"Image showing project"}
                                     className="hovered_img"
                                     style={{
