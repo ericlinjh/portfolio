@@ -5,6 +5,9 @@ $button-primary: #4242CD;
 $button-secondary: #1C1C46;
 
 html,body {overflow-y: scroll; overflow-x: hidden }
+#root {
+  overflow-x: hidden;
+}
 
 h1 {
   color: $text;
@@ -565,5 +568,62 @@ header {
 
   .case-study-comparisons-text p {
     line-height: 1.25;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-section {
+    .intro {
+      width: 80vw;
+
+      div {
+        gap: 16px;
+      }
+    }
+  }
+  p {
+    font-size: 16px;
+  }
+
+  .p2 {
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 90px;
+  }
+
+  h5 {
+    font-size: 28px;
+  }
+
+  h6 {
+    font-size: 21px;
+  }
+
+  .about-me {
+    flex-direction: column-reverse;
+    gap: 16px;
+    margin: 0 32px 0 32px;
+
+    img {
+      width: 95%;
+    }
+  }
+
+  .about-text h6 {
+    margin-bottom: 4px;
+  }
+
+  .case-study {
+    margin: 0 32px 0 32px;
+  }
+
+  .case-study-comparisons {
+    flex-direction: column-reverse;
+  }
+
+  .case-study-comparisons-images {
+    width: 100%;
   }
 }

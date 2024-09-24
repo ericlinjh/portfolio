@@ -771,15 +771,18 @@ function App() {
             {/*    initial="hidden"*/}
             {/*    animate={{opacity: "40%"}}*/}
             {/*/>*/}
-            <motion.img
-                id="background-gradient"
-                src={gradient}
-                variants={introFade}
-                initial="hidden"
-                animate="visible"
-            />
+            <div style={{"overflow-x": "hidden", width: "100vw"}}>
+                <motion.img
+                    id="background-gradient"
+                    src={gradient}
+                    variants={introFade}
+                    initial="hidden"
+                    animate="visible"
+                />
+            </div>
         </>
     )
         ;
 }
+
 export default App;
