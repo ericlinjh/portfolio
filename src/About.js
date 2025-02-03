@@ -35,14 +35,14 @@ export default function About() {
                     <h6>Nice to meet you!</h6>
                     <p className="p2">
                         Hey! I’m Eric, and welcome to my site! I study Systems Design Engineering at the University of
-                        Waterloo, though I’m currently doing my 3B term on exchange at the University of Hong Kong! I
+                        Waterloo, and I just wrapped up my 3B term on exchange at the University of Hong Kong! I
                         find the most satisfying moments of life to be when all the carefully positioned and executed
                         parts of a plan come together, creating something better than you could have ever imagined just
                         looking at the parts separately.
                         <br/> <br/>
-                        Across my degree, I’ve studied design processes, experienced 4 different internships, ran a
+                        Across my degree, I’ve studied design processes, experienced 5 different internships, ran a
                         half-marathon, and created a short film! Before I graduate I hope to perform in a small band,
-                        learn about neurotechnology, and a physical mapping and navigation tool.
+                        learn about neurotechnology, and build a physical mapping and navigation tool.
                         <br/> <br/>
                         During my free time, you’ll often find me playing music or making films. I mainly play bass
                         guitar and baritone saxophone, I’m simply a sucker for those pure deep tones. You can also check

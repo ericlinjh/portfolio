@@ -10,6 +10,8 @@ import {useRef} from "react"
 import personal_website from './projects/personal-website.png'
 import g_aim from './projects/garbage-aim.png'
 import mapapp from './projects/mapapp/landing_flow.gif'
+import spotifynotes from './projects/spotifynotes/spotifynotes.png'
+import spotifynotespres from './projects/spotifynotes/spotifynotes.pdf'
 import { Link } from "wouter";
 
 const introFade = {
@@ -196,6 +198,74 @@ function App() {
 
             <div className="projects">
                 <div className="projects-list">
+                    <a href={spotifynotespres} style={{width: "70%"}}>
+                        <motion.div
+                            onMouseMove={handleMouseMove}
+                            initial="initial"
+                            whileHover="whileHover"
+                            variants={projectsVariant}
+                            className="projects-indiv"
+                            style={{width: "100%"}}
+                        >
+                            <div className="projects-info">
+                                <div
+                                    className="projects-titlebox"
+                                >
+                                    <motion.h5
+                                        variants={{
+                                            initial: {y: 0},
+                                            whileHover: {y: "-100%"}
+                                        }}
+                                        transition={{
+                                            type: "linear",
+                                            duration: 0.1
+                                        }}
+                                    >
+                                        Spotify Notes
+                                    </motion.h5>
+                                    <motion.h5
+                                        variants={{
+                                            initial: {y: "0%"},
+                                            whileHover: {y: "-100%"}
+                                        }}
+                                        transition={{
+                                            type: "linear",
+                                            duration: 0.1
+                                        }}
+                                        style={{position: "absolute"}}
+                                    >Spotify Notes
+                                    </motion.h5>
+                                </div>
+                                <div className="projects-attributes">
+                                    <p>DESIGN</p>
+                                    <p>CASE STUDY</p>
+                                </div>
+                                <motion.img
+                                    src={spotifynotes}
+                                    alt={"Image showing project"}
+                                    className="hovered_img"
+                                    style={{
+                                        top: top,
+                                        left: left,
+                                        translateX: "-50%",
+                                        translateY: "-30%",
+                                        height: "150px"
+                                    }}
+                                    variants={{
+                                        initial: {
+                                            scale: 0,
+                                            rotate: "-12.5deg"
+                                        },
+                                        whileHover: {
+                                            scale: 1,
+                                            rotate: "0"
+                                        }
+                                    }}
+                                />
+                            </div>
+                            <hr/>
+                        </motion.div>
+                    </a>
                     <Link href="/projects/map_app" style={{width: "70%"}}>
                         <motion.div
                             onMouseMove={handleMouseMove}
@@ -236,7 +306,7 @@ function App() {
                                 </div>
                                 <div className="projects-attributes">
                                     <p>DESIGN</p>
-                                    <p>DEVELOPMENT</p>
+                                    <p>CASE STUDY</p>
                                 </div>
                                 <motion.img
                                     src={mapapp}
@@ -469,6 +539,46 @@ function App() {
                 <motion.a
                     initial="initial"
                     whileHover="hovered"
+                    href="https://shoplogix.com/"
+                    rel="noreferrer"
+                    target="_blank"
+                    className="jobs-indiv"
+                    id="shoplogix"
+                >
+                    <div className="job-date">
+                        <p className="p2">
+                            JAN - APR 2025
+                        </p>
+                    </div>
+                    <div className="job-details">
+                        <div className="job-title">
+                            <p><b>Product Manager · Shoplogix</b></p>
+                            <motion.div
+                                variants={{
+                                    initial: {y: 0},
+                                    hovered: {y: "-2px", x: "2px"}
+                                }}
+                                transition={{
+                                    type: "linear",
+                                    duration: 0.1
+                                }}
+                            >
+                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none"
+                                     xmlns="http://www.w3.org/2000/svg">
+                                    <path fillRule="evenodd" clipRule="evenodd"
+                                          d="M0.263225 12.2368C0.431987 12.4053 0.660751 12.5 0.899267 12.5C1.13778 12.5 1.36655 12.4053 1.53531 12.2368L10.1999 3.5722V10.4007C10.1999 10.6394 10.2947 10.8683 10.4635 11.0371C10.6323 11.2059 10.8612 11.3007 11.0999 11.3007C11.3387 11.3007 11.5676 11.2059 11.7364 11.0371C11.9052 10.8683 12 10.6394 12 10.4007V1.40006C12 1.16135 11.9052 0.932415 11.7364 0.763621C11.5676 0.594827 11.3387 0.5 11.0999 0.5H2.09935C1.86064 0.5 1.6317 0.594827 1.46291 0.763621C1.29411 0.932415 1.19929 1.16135 1.19929 1.40006C1.19929 1.63877 1.29411 1.8677 1.46291 2.0365C1.6317 2.20529 1.86064 2.30012 2.09935 2.30012H8.9278L0.263225 10.9647C0.0946735 11.1335 0 11.3622 0 11.6007C0 11.8392 0.0946735 12.068 0.263225 12.2368Z"
+                                          fill="#FBFBFE"/>
+                                </svg>
+                            </motion.div>
+                        </div>
+                        <p className="p2">
+                            Leading end-to-end development for Modules product, driving strategic initiatives through user data analysis and client discovery.
+                        </p>
+                    </div>
+                </motion.a>
+                <motion.a
+                    initial="initial"
+                    whileHover="hovered"
                     href="https://texadasoftware.com/"
                     rel="noreferrer"
                     target="_blank"
@@ -564,7 +674,7 @@ function App() {
                     rel="noreferrer"
                     target="_blank"
                     className="jobs-indiv"
-                   id="nova">
+                    id="nova">
                     <div className="job-date">
                         <p className="p2">
                             SEP - DEC 2022
@@ -612,7 +722,7 @@ function App() {
                     rel="noreferrer"
                     target="_blank"
                     className="jobs-indiv"
-                   id="desouza">
+                    id="desouza">
                     <div className="job-date">
                         <p className="p2">
                             JAN - APR 2022
